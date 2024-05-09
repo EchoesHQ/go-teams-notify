@@ -32,12 +32,11 @@ import (
 	"log"
 	"os"
 
-	goteamsnotify "github.com/atc0005/go-teams-notify/v2"
-	"github.com/atc0005/go-teams-notify/v2/messagecard"
+	goteamsnotify "github.com/EchoesHQ/go-teams-notify/v2"
+	"github.com/EchoesHQ/go-teams-notify/v2/messagecard"
 )
 
 func main() {
-
 	// Initialize a new Microsoft Teams client.
 	mstClient := goteamsnotify.NewTeamsClient()
 
@@ -60,18 +59,16 @@ func main() {
 		messagecard.PotentialActionOpenURIType,
 		targetURLDesc,
 	)
-
 	if err != nil {
 		log.Fatal("error encountered when creating new action:", err)
 	}
 
-	pa.PotentialActionOpenURI.Targets =
-		[]messagecard.PotentialActionOpenURITarget{
-			{
-				OS:  "default",
-				URI: targetURL,
-			},
-		}
+	pa.PotentialActionOpenURI.Targets = []messagecard.PotentialActionOpenURITarget{
+		{
+			OS:  "default",
+			URI: targetURL,
+		},
+	}
 
 	// Add the Action to the message card.
 	if err := msgCard.AddPotentialAction(pa); err != nil {

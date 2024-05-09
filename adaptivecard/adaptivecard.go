@@ -18,8 +18,8 @@ import (
 	"strconv"
 	"strings"
 
-	goteamsnotify "github.com/atc0005/go-teams-notify/v2"
-	"github.com/atc0005/go-teams-notify/v2/internal/validator"
+	goteamsnotify "github.com/EchoesHQ/go-teams-notify/v2"
+	"github.com/EchoesHQ/go-teams-notify/v2/internal/validator"
 )
 
 // General constants.
@@ -366,7 +366,6 @@ type Attachments []Attachment
 // Attachment represents an attached Adaptive Card for a Microsoft Teams
 // message.
 type Attachment struct {
-
 	// ContentType is required; must be set to
 	// "application/vnd.microsoft.card.adaptive".
 	ContentType string `json:"contentType"`
@@ -394,7 +393,6 @@ type TopLevelCard struct {
 // That type is used exclusively for Message Attachments. This type is used
 // directly for the Action.ShowCard Card field.
 type Card struct {
-
 	// Type is required; must be set to "AdaptiveCard"
 	Type string `json:"type"`
 
@@ -463,7 +461,6 @@ type Elements []Element
 // types. Not all fields of this Go struct type are supported by all Adaptive
 // Card element types.
 type Element struct {
-
 	// Type is required and indicates the type of the element used in the body
 	// of an Adaptive Card.
 	// https://adaptivecards.io/explorer/AdaptiveCard.html
@@ -595,6 +592,9 @@ type Element struct {
 	// Separator, when true, indicates that a separating line shown should be
 	// drawn at the top of the element.
 	Separator bool `json:"separator,omitempty"`
+
+	// Type of the Element must be set to "TextRun"
+	Inlines []*Element `json:"inlines,omitempty"`
 }
 
 // Container is an Element type that allows grouping items together.
@@ -768,7 +768,6 @@ type Actions []Action
 //
 // TODO: Extend with additional supported fields.
 type Action struct {
-
 	// Type is required; specific values are supported.
 	//
 	// Action.Submit is not supported for Incoming Webhooks.
@@ -887,7 +886,6 @@ entries.
 //
 // TODO: Extend with additional supported fields.
 type ISelectAction struct {
-
 	// Type is required; specific values are supported.
 	//
 	// The supported actions are Action.Execute, Action.OpenUrl,
@@ -925,7 +923,6 @@ type ISelectAction struct {
 // MSTeams represents a container for properties specific to Microsoft Teams
 // messages, including formatting properties and user mentions.
 type MSTeams struct {
-
 	// Width controls the width of Adaptive Cards within a Microsoft Teams
 	// messages.
 	// https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format#full-width-adaptive-card
