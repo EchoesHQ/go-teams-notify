@@ -10,7 +10,7 @@ package validator
 import (
 	"fmt"
 
-	goteamsnotify "github.com/atc0005/go-teams-notify/v2"
+	goteamsnotify "github.com/EchoesHQ/go-teams-notify/v2"
 )
 
 // Validater is the interface shared by all supported types which provide
@@ -91,7 +91,6 @@ func (v *Validator) FieldHasSpecificValue(
 	typeDesc string,
 	baseErr error,
 ) bool {
-
 	switch {
 	case v.err != nil:
 		return false
@@ -128,7 +127,6 @@ func (v *Validator) FieldHasSpecificValueIfFieldNotEmpty(
 	typeDesc string,
 	baseErr error,
 ) bool {
-
 	switch {
 	case v.err != nil:
 		return false
@@ -431,7 +429,6 @@ func (v *Validator) NotEmptyCollectionIfFieldValNotEmpty(
 	baseErr error,
 	items ...interface{},
 ) bool {
-
 	switch {
 	case v.err != nil:
 		return false

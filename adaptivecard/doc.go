@@ -10,7 +10,7 @@ Package adaptivecard provides support for generating Microsoft Teams messages
 using the Adaptive Card format.
 
 See the provided examples in this repo, the Godoc generated documentation at
-https://pkg.go.dev/github.com/atc0005/go-teams-notify/v2 and the following
+https://pkg.go.dev/github.com/EchoesHQ/go-teams-notify/v2 and the following
 resources for more information:
 
   - https://adaptivecards.io/explorer
