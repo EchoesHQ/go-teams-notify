@@ -27,12 +27,11 @@ import (
 	"log"
 	"os"
 
-	goteamsnotify "github.com/atc0005/go-teams-notify/v2"
-	"github.com/atc0005/go-teams-notify/v2/messagecard"
+	goteamsnotify "github.com/EchoesHQ/go-teams-notify/v2"
+	"github.com/EchoesHQ/go-teams-notify/v2/messagecard"
 )
 
 func main() {
-
 	// Initialize a new Microsoft Teams client.
 	mstClient := goteamsnotify.NewTeamsClient()
 

@@ -1,4 +1,5 @@
 <!-- omit in toc -->
+
 # goteamsnotify
 
 A package to send messages to a Microsoft Teams channel.
@@ -11,6 +12,7 @@ A package to send messages to a Microsoft Teams channel.
 [![Project Analysis](https://github.com/atc0005/go-teams-notify/actions/workflows/project-analysis.yml/badge.svg)](https://github.com/atc0005/go-teams-notify/actions/workflows/project-analysis.yml)
 
 <!-- omit in toc -->
+
 ## Table of contents
 
 - [Project home](#project-home)
@@ -72,7 +74,7 @@ Microsoft Teams.
   - [`MessageCard` `Actions`][msgcard-ref-actions]
   - [`Adaptive Card` `Actions`][adaptivecard-ref-actions]
 - Support for [user mentions][adaptivecard-user-mentions] (`Adaptive
-  Card` format)
+Card` format)
 - Configurable validation of webhook URLs
   - enabled by default, attempts to match most common known webhook URL
     patterns
@@ -280,7 +282,7 @@ URLs.
 See the Known importers lists below for a dynamically updated list of projects
 using either this library or the original project.
 
-- [this fork](https://pkg.go.dev/github.com/atc0005/go-teams-notify/v2?tab=importedby)
+- [this fork](https://pkg.go.dev/github.com/EchoesHQ/go-teams-notify/v2?tab=importedby)
 - [original project](https://pkg.go.dev/github.com/dasrick/go-teams-notify/v2?tab=importedby)
 
 ## References
@@ -290,27 +292,23 @@ using either this library or the original project.
 
 - Microsoft Teams
   - MS Teams - adaptive cards
-  ([de-de](https://docs.microsoft.com/de-de/outlook/actionable-messages/adaptive-card),
-  [en-us](https://docs.microsoft.com/en-us/outlook/actionable-messages/adaptive-card))
+    ([de-de](https://docs.microsoft.com/de-de/outlook/actionable-messages/adaptive-card),
+    [en-us](https://docs.microsoft.com/en-us/outlook/actionable-messages/adaptive-card))
   - MS Teams - send via connectors
-  ([de-de](https://docs.microsoft.com/de-de/outlook/actionable-messages/send-via-connectors),
-  [en-us](https://docs.microsoft.com/en-us/outlook/actionable-messages/send-via-connectors))
+    ([de-de](https://docs.microsoft.com/de-de/outlook/actionable-messages/send-via-connectors),
+    [en-us](https://docs.microsoft.com/en-us/outlook/actionable-messages/send-via-connectors))
   - [adaptivecards.io](https://adaptivecards.io/designer)
   - [Legacy actionable message card reference][msgcard-ref]
 
 [githubtag-image]: https://img.shields.io/github/release/atc0005/go-teams-notify.svg?style=flat
 [githubtag-url]: https://github.com/atc0005/go-teams-notify
-
-[goref-image]: https://pkg.go.dev/badge/github.com/atc0005/go-teams-notify/v2.svg
-[goref-url]: https://pkg.go.dev/github.com/atc0005/go-teams-notify/v2
-
+[goref-image]: https://pkg.go.dev/badge/github.com/EchoesHQ/go-teams-notify/v2.svg
+[goref-url]: https://pkg.go.dev/github.com/EchoesHQ/go-teams-notify/v2
 [license-image]: https://img.shields.io/github/license/atc0005/go-teams-notify.svg?style=flat
 [license-url]: https://github.com/atc0005/go-teams-notify/blob/master/LICENSE
-
-[msgcard-ref]: <https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference>
-[msgcard-ref-actions]: <https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#actions>
-
-[adaptivecard-ref]: <https://adaptivecards.io/explorer>
-[adaptivecard-ref-actions]: <https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/getting-started>
-[adaptivecard-user-mentions]: <https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format#mention-support-within-adaptive-cards>
-[adaptivecard-table]: <https://adaptivecards.io/explorer/Table.html>
+[msgcard-ref]: https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference
+[msgcard-ref-actions]: https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference#actions
+[adaptivecard-ref]: https://adaptivecards.io/explorer
+[adaptivecard-ref-actions]: https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/getting-started
+[adaptivecard-user-mentions]: https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format#mention-support-within-adaptive-cards
+[adaptivecard-table]: https://adaptivecards.io/explorer/Table.html
