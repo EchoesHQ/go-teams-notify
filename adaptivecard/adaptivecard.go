@@ -595,6 +595,18 @@ type Element struct {
 
 	// Type of the Element must be set to "TextRun"
 	Inlines []*Element `json:"inlines,omitempty"`
+
+	// "default" OR "monospace"
+	FontType string `json:"fontType,omitempty"`
+
+	// If true, displays the text highlighted.
+	Highlight bool `json:"highlight,omitempty"`
+
+	// If true, displays the text using italic font.
+	Italic bool `json:"italic,omitempty"`
+
+	// If true, displays the text with an underline.
+	Underline bool `json:"underline,omitempty"`
 }
 
 // Container is an Element type that allows grouping items together.
